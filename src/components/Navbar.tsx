@@ -20,9 +20,9 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border shadow-soft">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-28">
+        <div className="flex items-center justify-between h-40">
           <Link to="/" className="flex items-center space-x-3">
-            <img src={logo} alt="AdLead Digital Media" className="h-24 w-auto" />
+            <img src={logo} alt="AdLead Digital Media" className="h-36 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
