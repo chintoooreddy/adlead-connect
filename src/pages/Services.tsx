@@ -2,9 +2,9 @@ import { Card } from "@/components/ui/card";
 import {
   MessageSquare,
   Phone,
-  Megaphone,
+  MessageCircle,
   PhoneCall,
-  TrendingUp,
+  Target,
   CheckCircle2,
 } from "lucide-react";
 
@@ -25,7 +25,7 @@ const Services = () => {
       color: "text-primary",
     },
     {
-      icon: Phone,
+      icon: MessageCircle,
       title: "Bulk WhatsApp Services",
       description: "Engage customers on the most active messaging platform.",
       features: [
@@ -39,7 +39,7 @@ const Services = () => {
       color: "text-secondary",
     },
     {
-      icon: Megaphone,
+      icon: Phone,
       title: "Voice Call Broadcasting",
       description: "Reach thousands with pre-recorded voice messages.",
       features: [
@@ -67,7 +67,7 @@ const Services = () => {
       color: "text-secondary",
     },
     {
-      icon: TrendingUp,
+      icon: Target,
       title: "Digital Marketing",
       description: "End-to-end online branding & lead generation.",
       features: [
