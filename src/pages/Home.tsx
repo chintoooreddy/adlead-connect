@@ -76,6 +76,10 @@ const Home = () => {
         <div className="absolute inset-0 gradient-hero opacity-10"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
+            <div className="space-y-2">
+              <p className="text-lg md:text-xl font-semibold text-primary">Welcome to AdLead</p>
+              <p className="text-sm md:text-base text-muted-foreground italic">Empowering Your Business Digitally</p>
+            </div>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight">
               Grow Your Business Faster with{" "}
               <span className="text-primary">Smart Digital Communication</span>
