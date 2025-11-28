@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="space-y-4">
-            <img src={logo} alt="AdLead Digital Media" className="h-36 w-auto" />
+            <img src={logo} alt="AdLead Digital Media" className="h-16 w-auto" />
             <p className="text-sm text-muted-foreground">
               Empowering businesses with smart digital communication solutions.
             </p>
