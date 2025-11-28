@@ -4,9 +4,9 @@ import { Card } from "@/components/ui/card";
 import {
   MessageSquare,
   Phone,
-  Megaphone,
+  MessageCircle,
   PhoneCall,
-  TrendingUp,
+  Target,
   CheckCircle2,
   Zap,
   Shield,
@@ -35,13 +35,13 @@ const Home = () => {
       color: "text-primary",
     },
     {
-      icon: Phone,
+      icon: MessageCircle,
       title: "Bulk WhatsApp",
       description: "Send branded messages with buttons, catalogs, images & more.",
       color: "text-secondary",
     },
     {
-      icon: Megaphone,
+      icon: Phone,
       title: "Bulk Voice Calls",
       description: "Automated voice broadcasting for promotions & reminders.",
       color: "text-primary",
@@ -53,7 +53,7 @@ const Home = () => {
       color: "text-secondary",
     },
     {
-      icon: TrendingUp,
+      icon: Target,
       title: "Digital Marketing",
       description: "Professional ads, lead generation & online presence management.",
       color: "text-primary",
