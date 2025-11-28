@@ -96,6 +96,34 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Services Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Core Services</h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((service, index) => (
+              <Card
+                key={index}
+                className="p-6 hover:shadow-strong transition-all duration-300 hover:-translate-y-1 border-border/50"
+              >
+                <service.icon className={`w-12 h-12 mb-4 ${service.color}`} />
+                <h3 className="text-xl font-bold mb-2">{service.title}</h3>
+                <p className="text-muted-foreground">{service.description}</p>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Button asChild size="lg" variant="outline" className="border-2">
+              <Link to="/services">View All Services</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose Section */}
       <section className="py-16 bg-card">
         <div className="container mx-auto px-4">
@@ -136,34 +164,6 @@ const Home = () => {
               <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
               <span className="text-muted-foreground">Dedicated Customer Support</span>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Core Services</h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, index) => (
-              <Card
-                key={index}
-                className="p-6 hover:shadow-strong transition-all duration-300 hover:-translate-y-1 border-border/50"
-              >
-                <service.icon className={`w-12 h-12 mb-4 ${service.color}`} />
-                <h3 className="text-xl font-bold mb-2">{service.title}</h3>
-                <p className="text-muted-foreground">{service.description}</p>
-              </Card>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Button asChild size="lg" variant="outline" className="border-2">
-              <Link to="/services">View All Services</Link>
-            </Button>
           </div>
         </div>
       </section>
