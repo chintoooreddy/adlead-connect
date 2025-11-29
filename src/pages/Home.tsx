@@ -18,7 +18,6 @@ import {
   Rocket,
   Store,
 } from "lucide-react";
-import heroProfessionals from "@/assets/hero-professionals.jpg";
 
 const Home = () => {
   const strengths = [
@@ -76,31 +75,22 @@ const Home = () => {
       <section className="relative py-12 md:py-16 overflow-hidden">
         <div className="absolute inset-0 gradient-hero opacity-10"></div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="grid md:grid-cols-2 gap-8 items-center max-w-7xl mx-auto">
-            <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
-              <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                Grow Your Business Faster with{" "}
-                <span className="text-primary">Smart Digital Communication</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-muted-foreground">
-                Deliver your message instantly across SMS, WhatsApp, Voice, and Digital
-                Platforms — strengthen your customer reach with AdLead.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <Button asChild size="lg" className="gradient-hero text-lg px-8 shadow-strong">
-                  <Link to="/contact">Contact Us</Link>
-                </Button>
-                <Button asChild size="lg" variant="outline" className="text-lg px-8 border-2">
-                  <Link to="/contact">Request a Demo</Link>
-                </Button>
-              </div>
-            </div>
-            <div className="hidden md:block animate-in fade-in slide-in-from-right-4 duration-1000 delay-300">
-              <img 
-                src={heroProfessionals} 
-                alt="Professional team collaborating on digital communication strategies" 
-                className="rounded-2xl shadow-strong w-full h-auto object-cover"
-              />
+          <div className="text-center max-w-5xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+              Grow Your Business Faster with{" "}
+              <span className="text-primary">Smart Digital Communication</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-muted-foreground">
+              Deliver your message instantly across SMS, WhatsApp, Voice, and Digital
+              Platforms — strengthen your customer reach with AdLead.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
+              <Button asChild size="lg" className="gradient-hero text-lg px-8 shadow-strong">
+                <Link to="/contact">Contact Us</Link>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="text-lg px-8 border-2">
+                <Link to="/contact">Request a Demo</Link>
+              </Button>
             </div>
           </div>
         </div>
