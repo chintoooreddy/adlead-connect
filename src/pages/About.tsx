@@ -12,7 +12,7 @@ const About = () => {
   return (
     <div className="flex flex-col">
       {/* Hero */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-primary/5 to-secondary/5">
+      <section className="py-10 md:py-14 bg-gradient-to-br from-primary/5 to-secondary/5">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <h1 className="text-4xl md:text-5xl font-bold">About AdLead Digital Media</h1>
