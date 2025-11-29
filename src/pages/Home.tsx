@@ -117,7 +117,7 @@ const Home = () => {
             {services.map((service, index) => (
               <Card
                 key={index}
-                className="p-6 hover:shadow-strong transition-all duration-300 hover:-translate-y-1 border-border/50 hover:bg-primary/5 hover:border-primary/30"
+                className="p-6 service-card-hover hover:shadow-strong transition-all duration-300 hover:-translate-y-1 border-border/50"
               >
                 <service.icon className={`w-12 h-12 mb-4 ${service.color}`} />
                 <h3 className="text-xl font-bold mb-2">{service.title}</h3>

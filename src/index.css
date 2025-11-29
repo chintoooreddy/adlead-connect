@@ -135,4 +135,22 @@ All colors MUST be HSL.
   .shadow-strong {
     box-shadow: var(--shadow-strong);
   }
+  
+  .service-card-hover {
+    @apply relative overflow-hidden;
+  }
+  
+  .service-card-hover::before {
+    content: '';
+    @apply absolute inset-0 bg-primary/5 border-primary/30 rounded-lg;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out, border 0.5s ease-in-out;
+    z-index: -1;
+  }
+  
+  .service-card-hover:hover::before {
+    transform: scaleX(1);
+    border: 1px solid hsl(var(--primary) / 0.3);
+  }
 }
