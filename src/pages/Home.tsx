@@ -89,7 +89,7 @@ const Home = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center max-w-5xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-              Grow Your Business Faster with{" "}
+              Grow Your Business Faster With<br />
               <span className="text-primary">Smart Digital Communication</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground">

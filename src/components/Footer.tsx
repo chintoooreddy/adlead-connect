@@ -48,9 +48,11 @@ const Footer = () => {
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>Bulk SMS</li>
               <li>Bulk WhatsApp</li>
-              <li>Voice Calls</li>
-              <li>IVR Solutions</li>
+              <li>Bulk Voice Calls</li>
+              <li>IVR & Missed Call Services</li>
+              <li>Bulk Email Marketing</li>
               <li>Digital Marketing</li>
+              <li>Website Development</li>
             </ul>
           </div>
 
