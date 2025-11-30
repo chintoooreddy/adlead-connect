@@ -58,6 +58,18 @@ const Home = () => {
       description: "Professional ads, lead generation & online presence management.",
       color: "text-primary",
     },
+    {
+      icon: MessageSquare,
+      title: "Bulk Email",
+      description: "Powerful email campaigns with tracking, automation & analytics.",
+      color: "text-secondary",
+    },
+    {
+      icon: Building2,
+      title: "Website Development",
+      description: "Professional websites and ecommerce solutions tailored to your business.",
+      color: "text-primary",
+    },
   ];
 
   const industries = [

@@ -18,6 +18,9 @@ const Services = () => {
         "Promotional SMS",
         "Transactional SMS",
         "OTP SMS",
+        "Invitation SMS",
+        "SMS Gateway",
+        "SMS Reseller",
         "API Integration",
         "Delivery Reports",
         "DLT Support",
@@ -73,10 +76,45 @@ const Services = () => {
       features: [
         "Social Media Marketing",
         "Google Ads",
+        "Pay per Click",
+        "Search Engine Optimization",
+        "Video Advertising",
         "Lead Generation",
         "Brand Awareness",
         "Performance Marketing",
         "Analytics & Reporting",
+      ],
+      color: "text-primary",
+    },
+    {
+      icon: MessageSquare,
+      title: "Bulk Email Marketing",
+      description: "Powerful email campaigns that drive engagement and conversions.",
+      features: [
+        "Customizable Templates",
+        "Email Automation",
+        "List Segmentation",
+        "A/B Testing",
+        "Delivery Analytics",
+        "Spam Compliance",
+        "Real-Time Tracking",
+        "ROI Reporting",
+      ],
+      color: "text-secondary",
+    },
+    {
+      icon: Target,
+      title: "Website Development",
+      description: "Professional web solutions that elevate your online presence.",
+      features: [
+        "Website Design",
+        "Website Development",
+        "Ecommerce Solutions",
+        "Responsive Design",
+        "SEO Optimization",
+        "Content Management",
+        "Performance Optimization",
+        "Maintenance & Support",
       ],
       color: "text-primary",
     },
@@ -99,15 +137,13 @@ const Services = () => {
       {/* Services Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="space-y-12">
+          <div className="grid md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <Card
                 key={index}
-                className={`p-8 service-card-hover hover:shadow-strong transition-all duration-300 ${
-                  index % 2 === 0 ? "md:mr-12" : "md:ml-12"
-                }`}
+                className="p-8 service-card-hover hover:shadow-strong transition-all duration-300"
               >
-                <div className="grid md:grid-cols-2 gap-8 items-start">
+                <div className="space-y-6">
                   <div>
                     <service.icon className={`w-16 h-16 mb-4 ${service.color}`} />
                     <h2 className="text-2xl md:text-3xl font-bold mb-4">{service.title}</h2>
