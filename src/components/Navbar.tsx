@@ -22,7 +22,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center space-x-3">
-            <img src={logo} alt="AdLead Digital Media" className="h-20 w-48" />
+            <img src={logo} alt="AdLead Digital Media" className="h-20 w-64" />
           </Link>
 
           {/* Desktop Navigation */}
