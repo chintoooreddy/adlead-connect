@@ -37,7 +37,7 @@ const Pricing = () => {
               <div className="flex flex-col items-center gap-2">
                 <CheckCircle2 className="w-8 h-8 text-primary" />
                 <p className="font-semibold">Service Type</p>
-                <p className="text-sm text-muted-foreground">SMS / WhatsApp / Voice / IVR</p>
+                <p className="text-sm text-muted-foreground text-center">SMS / WhatsApp / Voice / IVR / Email / Digital Marketing / Website</p>
               </div>
               <div className="flex flex-col items-center gap-2">
                 <CheckCircle2 className="w-8 h-8 text-primary" />
