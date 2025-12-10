@@ -76,9 +76,11 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold mb-1">Location</h3>
                     <p className="text-muted-foreground">
+                      Plot No: 83/P & 84/P, 1st Floor
+                      <br />
                       Gajularamaram (KPHB Road),
                       <br />
-                      Hyderabad, Telangana, India
+                      Hyderabad, Telangana
                     </p>
                   </div>
                 </div>
