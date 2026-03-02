@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -14,6 +16,7 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [agreedToTerms, setAgreedToTerms] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -28,6 +31,15 @@ const Contact = () => {
       return;
     }
 
+    if (!agreedToTerms) {
+      toast({
+        title: "Terms Required",
+        description: "Please agree to the Terms and Conditions and Privacy Policy",
+        variant: "destructive",
+      });
+      return;
+    }
+
     // In a real app, this would send to your backend
     toast({
       title: "Message Sent!",
@@ -36,6 +48,7 @@ const Contact = () => {
 
     // Reset form
     setFormData({ name: "", phone: "", email: "", message: "" });
+    setAgreedToTerms(false);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -186,6 +199,24 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                   />
+                </div>
+
+                <div className="flex items-start space-x-3">
+                  <Checkbox
+                    id="terms"
+                    checked={agreedToTerms}
+                    onCheckedChange={(checked) => setAgreedToTerms(checked === true)}
+                  />
+                  <label htmlFor="terms" className="text-sm leading-5 cursor-pointer">
+                    I agree to the{" "}
+                    <Link to="/terms-and-conditions" className="text-primary hover:underline font-medium">
+                      Terms and Conditions
+                    </Link>{" "}
+                    and{" "}
+                    <Link to="/privacy-policy" className="text-primary hover:underline font-medium">
+                      Privacy Policy
+                    </Link>
+                  </label>
                 </div>
 
                 <Button type="submit" className="w-full gradient-hero shadow-strong">
