@@ -7,6 +7,7 @@ import { Card } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -18,10 +19,11 @@ const Contact = () => {
   });
   const [agreedToTerms, setAgreedToTerms] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Basic validation
     if (!formData.name || !formData.phone || !formData.email || !formData.message) {
       toast({
         title: "Missing Information",
@@ -40,15 +42,31 @@ const Contact = () => {
       return;
     }
 
-    // In a real app, this would send to your backend
-    toast({
-      title: "Message Sent!",
-      description: "We'll get back to you within 24 hours.",
-    });
+    setIsSubmitting(true);
+    try {
+      const { data, error } = await supabase.functions.invoke("send-contact-email", {
+        body: formData,
+      });
 
-    // Reset form
-    setFormData({ name: "", phone: "", email: "", message: "" });
-    setAgreedToTerms(false);
+      if (error) throw error;
+
+      toast({
+        title: "Message Sent!",
+        description: "We'll get back to you within 24 hours.",
+      });
+
+      setFormData({ name: "", phone: "", email: "", message: "" });
+      setAgreedToTerms(false);
+    } catch (error: any) {
+      console.error("Error sending message:", error);
+      toast({
+        title: "Failed to send",
+        description: "Something went wrong. Please try again or email us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -219,8 +237,8 @@ const Contact = () => {
                   </label>
                 </div>
 
-                <Button type="submit" className="w-full gradient-hero shadow-strong">
-                  Submit Message
+                <Button type="submit" className="w-full gradient-hero shadow-strong" disabled={isSubmitting}>
+                  {isSubmitting ? "Sending..." : "Submit Message"}
                 </Button>
               </form>
             </Card>
