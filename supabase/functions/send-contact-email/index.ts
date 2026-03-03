@@ -63,7 +63,7 @@ serve(async (req) => {
       },
       body: JSON.stringify({
         from: "AdLead Contact Form <onboarding@resend.dev>",
-        to: ["Sindhu@adlead.in"],
+        to: ["adleaddigitalmedia@gmail.com"],
         subject: `New Contact: ${name}`,
         html: htmlContent,
         reply_to: email,
