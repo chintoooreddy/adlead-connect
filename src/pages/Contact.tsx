@@ -234,6 +234,7 @@ const Contact = () => {
                     <Link to="/privacy-policy" className="text-primary hover:underline font-medium">
                       Privacy Policy
                     </Link>
+                    . By submitting this form you hereby grant us permission to contact you via SMS, WhatsApp, RCS, Email, and any other channel.
                   </label>
                 </div>
 
