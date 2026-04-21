@@ -47,6 +47,18 @@ const Home = () => {
       color: "text-primary",
     },
     {
+      icon: MessageSquare,
+      title: "RCS Messaging Services",
+      description: "Engage customers with rich, interactive messaging using next-generation RCS technology.",
+      color: "text-secondary",
+    },
+    {
+      icon: MessageCircle,
+      title: "Meta Verified WhatsApp Services",
+      description: "Build trust and credibility with an official verified WhatsApp business profile.",
+      color: "text-primary",
+    },
+    {
       icon: PhoneCall,
       title: "IVR & Missed Call",
       description: "24/7 automated call solutions for customer experience.",
