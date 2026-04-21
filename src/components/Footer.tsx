@@ -49,6 +49,8 @@ const Footer = () => {
               <li>Bulk SMS</li>
               <li>Bulk WhatsApp</li>
               <li>Bulk Voice Calls</li>
+              <li>Bulk RCS Messaging Services</li>
+              <li>Meta Verified WhatsApp Services</li>
               <li>IVR & Missed Call Services</li>
               <li>Bulk Email Marketing</li>
               <li>Digital Marketing</li>
