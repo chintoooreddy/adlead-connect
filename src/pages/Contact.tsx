@@ -107,9 +107,9 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold mb-1">Location</h3>
                     <p className="text-muted-foreground">
-                      Plot No: 83/P & 84/P, 1st Floor
+                      Plot No: A-9, 4th floor
                       <br />
-                      Gajularamaram (KPHB Road),
+                      Mahadevapuram (KPHB Road), Gajularamaram,
                       <br />
                       Hyderabad, Telangana
                     </p>
